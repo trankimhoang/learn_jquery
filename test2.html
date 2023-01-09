@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+<p>Tran Kim Hoang</p>
+<p>Nguyen Kim Long</p>
+
+<h3>Tran Kim Hoang- db click</h3>
+<h3 id="test" class="test">Nguyen Kim Long- db click</h3>
+<script>
+    $(document).ready(function (){
+
+        $("p").click(function (){
+            $(this).css("color", "red");
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function (){
+        $("h3#test.test").hover(function (){
+            $(this).hide();
+        });
+    });
+</script>
+</body>
+</html>

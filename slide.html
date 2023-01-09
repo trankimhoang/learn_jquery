@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+<script>
+    $(document).ready(function(){
+        $("#flip").click(function(){
+            if ($(this).attr("data-open") == 1){
+                $("#panel").slideDown("slow");
+                $(this).attr("data-open", 0);
+            }else {
+                $("#panel").slideUp("slow");
+                $(this).attr("data-open", 1);
+            }
+        });
+    });
+</script>
+<style>
+    #panel, #flip {
+        padding: 5px;
+        text-align: center;
+        background-color: #e5eecc;
+        border: solid 1px #c3c3c3;
+    }
+
+    #panel {
+        padding: 50px;
+        display: none;
+    }
+</style>
+
+<div id="flip" data-open="1">Nhan de hien thi slide</div>
+<div id="panel">Hello!</div>
+</body>
+</html>

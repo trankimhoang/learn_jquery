@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+<h3 id="menu">The loai</h3>
+<ul>
+    <li>Ao</li>
+    <li>Quan</li>
+    <li>Dep</li>
+    <li>Giay</li>
+</ul>
+
+<script>
+    $(document).ready(function (){
+        $("ul li").hide();
+        $("#menu").hover(
+            function (){
+                $("ul li").show();
+            },
+            function (){
+                $("ul li").hide();
+            }
+        );
+    });
+</script>
+</body>
+</html>
